@@ -37,6 +37,7 @@ input {
 button {
   color: #FDFDFD;
   background-color: #AC485A;
+  margin-bottom: .5rem;
 }
 
 input, button {
@@ -48,6 +49,30 @@ input, button {
   font-family: "Rubik", sans-serif;
 }
 
-li {
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  gap: .8rem;
+}
+
+ul li {
+  flex-grow: 1;
+  border: 0;
+  padding: 1.5rem;
+  border-radius: .8rem;
+  text-align: center;
   font-size: 2rem;
+  font-family: "Rubik", sans-serif;
+  background-color: #FFFDF8;
+  box-shadow: 0rem .1rem .4rem rgba(0, 0, 0, 0.2);
+}
+
+p {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 1rem;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
 }
