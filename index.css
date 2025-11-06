@@ -1,0 +1,53 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+  font-size: 62.5%;
+  background-color: #EEF0F4;
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  background-color: #eef0f4;
+  border-radius: 1rem;
+  max-width: 32rem;
+}
+
+main, .container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+img {
+  width: 20rem;
+  margin: 0 auto;
+}
+
+input {
+  color: #432000;
+  background-color: #DCE1EB;
+  margin: 1rem 0;
+}
+
+button {
+  color: #FDFDFD;
+  background-color: #AC485A;
+}
+
+input, button {
+  border: 0;
+  padding: 1.5rem;
+  border-radius: .8rem;
+  font-size: 2rem;
+  text-align: center;
+  font-family: "Rubik", sans-serif;
+}
+
+li {
+  font-size: 2rem;
+}
