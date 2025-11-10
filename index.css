@@ -4,6 +4,7 @@ html, body {
   font-family: "Rubik", sans-serif;
   font-size: 62.5%;
   background-color: #EEF0F4;
+  user-select: none;
 }
 
 main {
@@ -49,6 +50,11 @@ input, button {
   font-family: "Rubik", sans-serif;
 }
 
+button:hover {
+  background-color: #7B2434;
+  cursor: pointer;
+}
+
 ul {
   display: flex;
   flex-wrap: wrap;
@@ -67,6 +73,11 @@ ul li {
   font-family: "Rubik", sans-serif;
   background-color: #FFFDF8;
   box-shadow: 0rem .1rem .4rem rgba(0, 0, 0, 0.2);
+}
+
+li:hover {
+  background-color: #FFD381;
+  cursor: pointer;
 }
 
 p {
