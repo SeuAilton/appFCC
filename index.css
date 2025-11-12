@@ -35,9 +35,13 @@ input {
   margin: 1rem 0;
 }
 
+input:focus {
+  outline: solid #38A3A5;
+}
+
 button {
   color: #FDFDFD;
-  background-color: #AC485A;
+  background-color: #38A3A5;
   margin-bottom: .5rem;
 }
 
@@ -51,8 +55,23 @@ input, button {
 }
 
 button:hover {
-  background-color: #7B2434;
+  background-color: #22577A;
   cursor: pointer;
+}
+
+button:active {
+  background-color: #57CC99;
+}
+
+#message {
+  border: 0;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: "Rubik", sans-serif;
+  border-radius: .8rem;
+  background-color: #FFD381;
+  font-weight: bold;
 }
 
 ul {
@@ -61,6 +80,12 @@ ul {
   list-style: none;
   padding: 0;
   gap: .8rem;
+}
+
+li.confirm-delete {
+  background-color: #ffebee !important;
+  color: #c62828 !important;
+  cursor: pointer;
 }
 
 ul li {
@@ -80,10 +105,13 @@ li:hover {
   cursor: pointer;
 }
 
-p {
+#no-itens {
   font-size: 2rem;
   text-align: center;
-  margin-top: 1rem;
-  padding: 0;
+  margin: .1rem 0 0 0;
+  padding: 1.5rem;
   font-family: "Rubik", sans-serif;
+  display: none;
+  background-color: #FFD381;
+  border-radius: .8rem;
 }
