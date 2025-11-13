@@ -1,3 +1,15 @@
+@media (min-width: 992px) {
+  button:hover {
+    background-color: #22577A;
+    cursor: pointer;
+  }
+
+  li:hover {
+    background-color: #FFD381;
+    cursor: pointer;
+  }
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -54,11 +66,6 @@ input, button {
   font-family: "Rubik", sans-serif;
 }
 
-button:hover {
-  background-color: #22577A;
-  cursor: pointer;
-}
-
 button:active {
   background-color: #57CC99;
 }
@@ -98,11 +105,6 @@ ul li {
   font-family: "Rubik", sans-serif;
   background-color: #FFFDF8;
   box-shadow: 0rem .1rem .4rem rgba(0, 0, 0, 0.2);
-}
-
-li:hover {
-  background-color: #FFD381;
-  cursor: pointer;
 }
 
 #no-itens {

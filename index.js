@@ -23,9 +23,8 @@ const formatText = (text) => {
 
   return text
     .toLowerCase()
-    .split(" ")
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(" ");
+    .replace(/(^|\.\s*)\w/g, char => char.toUpperCase());
+
 };
 
 const newItemsToShoppingList = (item) => {
@@ -34,7 +33,7 @@ const newItemsToShoppingList = (item) => {
   let itemValue = item[1];
 
   newEl.textContent = itemValue;
-  
+
   newEl.addEventListener("click", () => {
     if (newEl.classList.contains('confirm-delete')) {
       let exactLocationOfItemInDB = ref(database, `shoppingList/${itemID}`);
@@ -76,6 +75,18 @@ addButton.addEventListener("click", () => {
     return;
   }
 
+  if (inputValue.length > 20) {
+    inputField.placeholder = "Máximo de 20 caracteres!";
+    inputField.style.backgroundColor = "#E7B3B5"
+    
+    setTimeout(() => {
+      inputField.placeholder = "Pão";
+      inputField.style.backgroundColor = ""
+    }, 1500);
+
+    return;
+  }
+
   let formattedValue = formatText(inputValue);
 
   push(shoppingListInDB, formattedValue);
@@ -97,4 +108,10 @@ onValue(shoppingListInDB, (snapshot) => {
     clearShoppingList();
     noItensEl.style.display = "block";
   };
+});
+
+document.addEventListener("keypress", (e) => {
+  if(e.key === "Enter") {
+    addButton.click();
+  }
 });
